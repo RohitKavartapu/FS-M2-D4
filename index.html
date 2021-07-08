@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+
+    In this app you will generate teams and assign the participants to them.
+    You will use the Bootstrap components for the elements of your app.
+
+    The features are the following:
+    - The user should be able to add a list of names, find a way to get the user input and fill a list with the new name.
+    - The user should be able to set the number of teams he wants, so that they will be generated. A team is just another list to be displayed.
+    - An "Assign" button will be required in order to launch the team generation functionality.
+    - Every time the user clicks on the "Assign" button, a random name is placed in a team and removed from the initial list.
+    - Each team should be inside a "column" to be responsive.
+    - [EXTRA] Create a button to remove a user from a team, and putting him back in the main list, waiting to be reassigned.
+    - [EXTRA] Create a button to reset the state of the app.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>STRIVE TEAM GENERATOR!</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-style">
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#micro"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href=""><img src="teams.jpg" alt="Strive Team" id="img-1" /></a>
+          <a class="navbar-brand" href="#">Teams</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="micro">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">Teams</a></li>
+            <li><a href="">List Of Names</a></li>
+            <li><a href="">Assign</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <h1>STRIVE TEAM GENERATOR!</h1>
+          <a class="btn btn-first" href="">Click here to assign Names</a>
+        </div>
+        <div class="col-sm-6"></div>
+      </div>
+    </div>
+
+    <input id="text1" placeholder="Enter names to add" />
+    <br /><br>
+    <button onclick="fn1()" id="btn1">Click here to assign Names</button>
+
+    <script type="text/javascript">
+      let listOfNames = [];
+      listOfNames.push("Jim", "John", "Ted", "Mike");
+      console.log("The new members of the team are:", listOfNames);
+
+      function fn1() {
+          let str = document.getElementById("text1").value;
+          alert("The added names are:" +str);
+      }
+    </script>
+  </body>
+</html>
